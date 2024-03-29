@@ -176,16 +176,8 @@
     <script src="./js/app.js" defer></script>
   </head>
 
-  <body
-    data-email="user@example.com"
-    data-password="12345678"
-    data-url="https://api.ulems.my.id/"
-    style="overflow-y: hidden"
-  >
-  <img
-    src="assets/images/RRP_7058.jpg"
-    style="display: none;"
-    />
+  <body style="overflow-y: hidden">
+    <img src="assets/images/RRP_7058.jpg" style="display: none" />
     <!-- Main Content -->
     <main
       class="text-light"
@@ -656,111 +648,115 @@
           </div>
         </div>
       </section>
-    <!-- Footer Undangan -->
-    <footer class="pt-5">
-      <div class="container pt-5">
-        <div class="text-center">
-          <p
-            style="font-size: 0.9rem"
-            class="pt-2 pb-1 px-2"
-            data-aos="fade-up"
-            data-aos-duration="1500"
-          >
-            Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila, Bapak
-            / Ibu / Saudara / i. berkenan hadir untuk memberikan do'a restunya
-            kami ucapkan terimakasih.
-          </p>
-
-          <h1 class="font-esthetic" data-aos="fade-up" data-aos-duration="2000">
-            Wassalamualaikum Warahmatullahi Wabarakatuh
-          </h1>
-          <h1
-            class="font-arabic py-4 px-2"
-            data-aos="fade-up"
-            data-aos-duration="2000"
-            style="font-size: 2rem"
-          >
-            اَلْحَمْدُ لِلّٰهِ رَبِّ الْعٰلَمِيْنَۙ
-          </h1>
-        </div>
-      </div>
-    </footer>
-
-    <!-- Welcome Page -->
-    <div class="loading-page" id="welcome" style="opacity: 1">
-      <div
-        class="d-flex justify-content-center align-items-center"
-        style="height: 100vh !important"
-      >
-        <div class="text-center">
-          <h1 class="font-esthetic mb-4" style="font-size: 2.5rem">
-            The Wedding Of
-          </h1>
-
-          <div
-            class="img-crop border border-3 border-light shadow mb-4 mx-auto"
-          >
-            <img src="./assets/images/bg.jpeg" alt="bg" />
-          </div>
-
-          <h1 class="font-esthetic my-4" style="font-size: 2.5rem">
-            Rahmat & Silva
-          </h1>
-          <div id="nama-tamu"></div>
-
-          <button
-            type="button"
-            class="btn btn-light shadow rounded-4 mt-4"
-            onclick="util.buka(this)"
-          >
-            <i class="fa-solid fa-envelope-open me-2"></i>Buka Undangan
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Audio Button -->
-    <button
-      type="button"
-      id="tombol-musik"
-      style="display: none"
-      class="btn btn-light btn-sm rounded-circle btn-music"
-      onclick="util.music(this)"
-      data-status="true"
-      data-url="https://sndup.net/b53w/d"
-    >
-      <i class="fa-solid fa-circle-pause spin-button"></i>
-    </button>
-
-    <!-- Loading page -->
-    <div class="loading-page" id="loading" style="opacity: 1">
-      <div
-        class="d-flex justify-content-center align-items-center"
-        style="height: 100vh !important"
-      >
-        <div class="text-center w-75">
-          <div class="progress" role="progressbar" style="height: 0.5rem">
-            <div class="progress-bar" id="bar" style="width: 0%"></div>
-          </div>
-          <small
-            class="mt-1 text-light"
-            id="progress-info"
-            style="display: none"
-            >Loading asset</small
-          >
-
-          <script>
-            document.getElementById("progress-info").style.display = "block"
-          </script>
-          <noscript>
-            <small class="mt-1 text-danger"
-              >Maaf, undangan ini perlu javascript</small
+      <!-- Footer Undangan -->
+      <footer class="pt-5">
+        <div class="container pt-5">
+          <div class="text-center">
+            <p
+              style="font-size: 0.9rem"
+              class="pt-2 pb-1 px-2"
+              data-aos="fade-up"
+              data-aos-duration="1500"
             >
-          </noscript>
+              Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila,
+              Bapak / Ibu / Saudara / i. berkenan hadir untuk memberikan do'a
+              restunya kami ucapkan terimakasih.
+            </p>
+
+            <h1
+              class="font-esthetic"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
+              Wassalamualaikum Warahmatullahi Wabarakatuh
+            </h1>
+            <h1
+              class="font-arabic py-4 px-2"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              style="font-size: 2rem"
+            >
+              اَلْحَمْدُ لِلّٰهِ رَبِّ الْعٰلَمِيْنَۙ
+            </h1>
+          </div>
+        </div>
+      </footer>
+
+      <!-- Welcome Page -->
+      <div class="loading-page" id="welcome" style="opacity: 1">
+        <div
+          class="d-flex justify-content-center align-items-center"
+          style="height: 100vh !important"
+        >
+          <div class="text-center">
+            <h1 class="font-esthetic mb-4" style="font-size: 2.5rem">
+              The Wedding Of
+            </h1>
+
+            <div
+              class="img-crop border border-3 border-light shadow mb-4 mx-auto"
+            >
+              <img src="./assets/images/bg.jpeg" alt="bg" />
+            </div>
+
+            <h1 class="font-esthetic my-4" style="font-size: 2.5rem">
+              Rahmat & Silva
+            </h1>
+            <div id="nama-tamu"></div>
+
+            <button
+              type="button"
+              class="btn btn-light shadow rounded-4 mt-4"
+              onclick="util.buka(this)"
+            >
+              <i class="fa-solid fa-envelope-open me-2"></i>Buka Undangan
+            </button>
+          </div>
         </div>
       </div>
-    </div>
 
+      <!-- Audio Button -->
+      <button
+        type="button"
+        id="tombol-musik"
+        style="display: none"
+        class="btn btn-light btn-sm rounded-circle btn-music"
+        onclick="util.music(this)"
+        data-status="true"
+        data-url="assets/lagu-pernikahan-impian.mp3"
+      >
+        <i class="fa-solid fa-circle-pause spin-button"></i>
+      </button>
+
+      <!-- Loading page -->
+      <div class="loading-page" id="loading" style="opacity: 1">
+        <div
+          class="d-flex justify-content-center align-items-center"
+          style="height: 100vh !important"
+        >
+          <div class="text-center w-75">
+            <div class="progress" role="progressbar" style="height: 0.5rem">
+              <div class="progress-bar" id="bar" style="width: 0%"></div>
+            </div>
+            <small
+              class="mt-1 text-light"
+              id="progress-info"
+              style="display: none"
+              >Loading asset</small
+            >
+
+            <script>
+              document.getElementById("progress-info").style.display = "block"
+            </script>
+            <noscript>
+              <small class="mt-1 text-danger"
+                >Maaf, undangan ini perlu javascript</small
+              >
+            </noscript>
+          </div>
+        </div>
+      </div>
+    </main>
     <!-- Modal Foto Large -->
     <div class="modal fade" id="modal-image" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-xl">
@@ -771,7 +767,7 @@
               style="height: 100%"
             >
               <img
-                src="./assets/images/bg.jpeg"
+                src="assets/images/bg.jpeg"
                 class="w-100"
                 alt="foto"
                 id="show-modal-image"

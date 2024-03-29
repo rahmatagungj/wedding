@@ -30,44 +30,6 @@ const storage = (table) => {
   }
 }
 
-const request = (method, path) => {
-  let url = document.querySelector("body").getAttribute("data-url")
-  let req = {
-    method: method.toUpperCase(),
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-    },
-  }
-
-  if (url.slice(-1) == "/") {
-    url = url.slice(0, -1)
-  }
-
-  return {
-    async then(...params) {
-      return fetch(url + path, req)
-        .then((res) => res.json())
-        .then((res) => {
-          if (res.error !== null) {
-            throw res.error[0]
-          }
-
-          return res
-        })
-        .then(...params)
-    },
-    token(token) {
-      req.headers["Authorization"] = "Bearer " + token
-      return this
-    },
-    body(body) {
-      req.body = JSON.stringify(body)
-      return this
-    },
-  }
-}
-
 const util = (() => {
   const opacity = (nama) => {
     let nm = document.getElementById(nama)
@@ -232,6 +194,7 @@ const progress = (() => {
   const assets = document.querySelectorAll("img")
   const info = document.getElementById("progress-info")
   const bar = document.getElementById("bar")
+  const barElement = document.getElementsByClassName("progress")[0]
 
   let total = assets.length
   let loaded = 0
@@ -245,7 +208,11 @@ const progress = (() => {
     ).toFixed(0)}%]`
 
     if (loaded == total) {
-      util.show()
+      info.innerText = "All assets loaded"
+      barElement.style.display = "none"
+      setTimeout(() => {
+        util.show()
+      }, 1000)
     }
   }
 
