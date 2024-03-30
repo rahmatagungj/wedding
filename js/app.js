@@ -101,6 +101,42 @@ const util = (() => {
     new bootstrap.Modal("#modal-image").show()
   }
 
+  const tamu = () => {
+    let name = new URLSearchParams(window.location.search).get("to")
+
+    if (!name) {
+      document.getElementById("nama-tamu").remove()
+      return
+    }
+
+    let div = document.createElement("div")
+    div.classList.add("m-2")
+    div.innerHTML = `<p class="mt-0 mb-1 mx-0 p-0 text-light">Kepada Yth Bapak/Ibu/Saudara/i</p><h2 class="text-light">${escapeHtml(
+      name
+    )}</h2>`
+
+    document.getElementById("nama-tamu").appendChild(div)
+  }
+
+  const salin = (btn, msg = "Tersalin", timeout = 1500) => {
+    navigator.clipboard.writeText(btn.getAttribute("data-nomer"))
+
+    let tmp = btn.innerHTML
+    btn.innerHTML = msg
+    btn.disabled = true
+
+    let clear = null
+    clear = setTimeout(() => {
+      btn.innerHTML = tmp
+      btn.disabled = false
+      btn.focus()
+
+      clearTimeout(clear)
+      clear = null
+      return
+    }, timeout)
+  }
+
   const animation = () => {
     const duration = 15 * 1000
     const animationEnd = Date.now() + duration
@@ -164,9 +200,11 @@ const util = (() => {
       zIndex: 1057,
     })
     animation()
+    document.getElementById("navbar-menus").removeAttribute("style")
   }
 
   const show = () => {
+    tamu()
     opacity("loading")
     window.scrollTo(0, 0)
   }
@@ -187,6 +225,7 @@ const util = (() => {
     escapeHtml,
     show,
     animate,
+    salin,
   }
 })()
 
