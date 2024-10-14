@@ -14,7 +14,8 @@ body {
 }
 
 .font-esthetic {
-  font-family: "Sacramento", cursive !important;
+  /* font-family: "Sacramento", cursive !important; */
+  font-family: cursive !important;
   color: #ffffff !important;
 }
 
